@@ -11,7 +11,7 @@ async function send(req) {
     const data = req.body;
     data.timestamp = new Date();
 
-    batch.tryAdd(data);
+    batch.tryAdd({"body": data});
 
     await producerClient.sendBatch(batch);
     await producerClient.close();
@@ -26,7 +26,7 @@ app.post('/dados', (req, res) => {
     send(req);
     res.json(req.body);
 
-    // res.redirect(200,'index.html');
+    res.redirect(200,'https://unicampbigdatademo.z20.web.core.windows.net/index.html');
 
 });
   
