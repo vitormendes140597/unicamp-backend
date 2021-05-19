@@ -26,7 +26,7 @@ app.post('/dados', (req, res) => {
     send(req);
     res.json(req.body);
 
-    res.redirect(200,'https://unicampbigdatademo.z20.web.core.windows.net/index.html');
+    res.redirect('https://unicampbigdatademo.z20.web.core.windows.net/index.html');
 
 });
   
