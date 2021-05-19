@@ -24,7 +24,6 @@ app.post('/dados', (req, res) => {
 
     console.log(req.body);
     send(req);
-    res.json(req.body);
 
     res.redirect('https://unicampbigdatademo.z20.web.core.windows.net/index.html');
 
