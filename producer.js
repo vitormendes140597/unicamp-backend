@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 const { EventHubProducerClient, EventHubConsumerClient } = require("@azure/event-hubs");
-const eventHubKey = "Endpoint=sb://eh-unicamp.servicebus.windows.net/;SharedAccessKeyName=app;SharedAccessKey=zHdoYTI6IBMqWP0y31w4tyvWrRErVQ9DiMeEQp+/E5s=;EntityPath=eh-click";
+const eventHubKey = process.env.EVENT_HUB_KEY;
 
 async function send(req) {
     const producerClient = new EventHubProducerClient(eventHubKey);
