@@ -5,7 +5,8 @@
   "main": "producer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node node_modules/nodemon/bin/nodemon bin/server"
+    "dev": "node node_modules/nodemon/bin/nodemon bin/server",
+    "start": "node producer.js"
   },
   "author": "",
   "license": "ISC",
